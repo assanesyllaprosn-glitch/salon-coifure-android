@@ -2,6 +2,8 @@
 
 Application mobile Android pour la gestion d'un salon de coiffure avec système de cartes NFC.
 
+*Build automatique via GitHub Actions*
+
 ## Fonctionnalités
 
 - **Gestion des clients** : Création, modification et recherche de clients
