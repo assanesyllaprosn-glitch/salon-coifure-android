@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  buildozer:
+    image: kivy/buildozer
+    volumes:
+      - .:/app
+      - ./apk:/output
+    working_dir: /app
+    command: buildozer android debug

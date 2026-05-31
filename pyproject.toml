@@ -1,0 +1,20 @@
+[tool.briefcase]
+project_name = "Salon Coifure"
+bundle = "org.housefade"
+version = "1.0.0"
+description = "Gestion de salon de coiffure avec cartes NFC"
+url = "https://github.com/housefade/salon-coifure"
+author = "House Fade"
+author_email = "info@housefade.com"
+license = "MIT"
+
+[tool.briefcase.app.saloncoifure]
+formal_name = "Salon Coifure"
+description = "Gestion de salon de coiffure avec cartes NFC"
+icon = "resources/icon"
+sources = ["src/saloncoifure"]
+test_sources = ["tests"]
+requires = [
+    "kivy==2.0.0",
+    "python-dateutil==2.8.2",
+]
