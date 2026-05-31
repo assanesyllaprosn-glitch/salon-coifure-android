@@ -10,24 +10,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    container:
+      image: ghcr.io/coder/code-server:4.18.0-ubuntu
     
     steps:
     - uses: actions/checkout@v4
-    
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.8'
-    
-    - name: Install build dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y build-essential git python3 python3-dev openjdk-8-jdk
-        sudo apt-get install -y libc6-dev-i386 lib32z1 lib32ncurses5 libstdc++6
-        sudo apt-get install -y zlib1g-dev libncurses5-dev libtinfo5 libbz2-1.0
-        sudo apt-get install -y automake libtool pkg-config libffi-dev
     
     - name: Install buildozer
       run: |
@@ -36,8 +23,6 @@ jobs:
     - name: Build APK
       run: |
         buildozer android debug
-      env:
-        ANDROID_HOME: /opt/android-sdk
     
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
