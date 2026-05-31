@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    env:
+      ANDROID_SDK_ACCEPT_LICENSES: true
     
     steps:
     - uses: actions/checkout@v4
@@ -31,6 +33,12 @@ jobs:
     - name: Install buildozer
       run: |
         pip3 install buildozer cython
+    
+    - name: Accept Android SDK licenses
+      run: |
+        mkdir -p ~/.android
+        echo "24333f8a63b6825ea9c5514f83c2829b004d1fee" > ~/.android/repositories.cfg
+        yes | sdkmanager --licenses || true
     
     - name: Build APK
       run: |
