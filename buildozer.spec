@@ -22,7 +22,7 @@ source.exclude_patterns =
 version = 1.0.0
 
 # (list) Application requirements
-requirements = kivy==2.0.0,python-dateutil==2.8.2,pyjnius==1.4.1,android
+requirements = kivy==1.11.1,python-dateutil==2.8.2,pyjnius==1.4.1,android
 
 # (str) Presplash of the application
 #presplash.filename = %(source.dir)s/data/presplash.png
