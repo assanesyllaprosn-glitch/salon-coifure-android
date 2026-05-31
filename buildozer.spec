@@ -37,19 +37,19 @@ android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,NFC
 android.features = android.hardware.nfc
 
 # (int) Target Android API, should be as high as possible.
-android.api = 30
+android.api = 33
 
 # (int) Minimum Android API this application requires
 android.minapi = 21
 
 # (str) Android NDK version to use
-android.ndk = 25b
+android.ndk = 25.2.9519653
 
 # (str) Android SDK version to use
-android.sdk = 30
+android.sdk = 33
 
 # (str) python-for-android branch to use, depends on android.api
-android.p4a_branch = stable
+android.p4a_branch = develop
 
 # (str) Android entry point, default is ok for Kivy-based app
 android.entrypoint = org.kivy.android.PythonActivity
