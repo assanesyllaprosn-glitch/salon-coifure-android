@@ -49,7 +49,7 @@ android.ndk = 25b
 android.sdk = 33
 
 # (str) python-for-android branch to use, depends on android.api
-android.p4a_branch = develop
+android.p4a_branch = stable
 
 # (str) Android entry point, default is ok for Kivy-based app
 android.entrypoint = org.kivy.android.PythonActivity
